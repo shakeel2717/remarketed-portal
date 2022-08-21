@@ -5,7 +5,7 @@
         <div class="about">
             <!--    btn container      -->
             <div class="btn-container">
-                <ul>
+                <ul class="mb-2">
                     <li><a href="#" class="tab-btn active" data-id="Board View">Board View</a></li>
                     <li><a href="#" class="tab-btn" data-id="List view">List view</a>
                     </li>
@@ -13,6 +13,13 @@
                     <li><a href="#" class="tab-btn" data-id="Dashboard">Dashboard</a></li>
                     <li><a href="#" class="tab-btn" data-id="Timeline">Timeline</a></li>
                 </ul>
+            </div>
+            <div class="container-fluid px-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" class="btn btn-lg btn-primary mt-4"> <i class="fa fa-plus" aria-hidden="true"></i> Add Device </a>
+                    </div>
+                </div>
             </div>
             <div class="about-content">
                 <!--    item     -->

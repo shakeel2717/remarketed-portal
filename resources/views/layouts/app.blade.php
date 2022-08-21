@@ -17,8 +17,10 @@
     <link rel="icon" href="/assets/img/favicon.ico" />
 
     <!-- Include Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{{ asset('assets/icons/css/font-awesome.min.css') }}">
 
     <!-- Main StyleSheet -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
@@ -168,8 +170,7 @@
     <!-- popup 2 start -->
     <div class="popup-part2">
 
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-bodys">
@@ -182,8 +183,7 @@
 
                                         <div class="popup_left1">
                                             <div class="popup_left1-left">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="popup_left1-inner">
                                                 <h2>Additional Parts</h2>
@@ -191,8 +191,7 @@
                                             <div class="popup_left1-right">
                                                 <ul>
                                                     <li><a href="#">Save</a></li>
-                                                    <li><a href="#"><img src="/assets/img/icon16.svg"
-                                                                alt="iocn" /></a></li>
+                                                    <li><a href="#"><img src="/assets/img/icon16.svg" alt="iocn" /></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -227,8 +226,7 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Added</a></span>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Added</a></span>
                                                                         </h5>
                                                                         <img src="/assets/img/icon20.svg" alt="icon" />
                                                                     </div>
@@ -237,8 +235,7 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -249,16 +246,14 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6">
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -269,16 +264,14 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6">
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -293,16 +286,14 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6">
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Added</a></span>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Added</a></span>
                                                                         </h5>
                                                                         <img src="/assets/img/icon20.svg" alt="icon" />
                                                                     </div>
@@ -315,16 +306,14 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6">
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -335,16 +324,14 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6">
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -358,8 +345,7 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Added</a></span>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Added</a></span>
                                                                         </h5>
                                                                         <img src="/assets/img/icon20.svg" alt="icon" />
                                                                     </div>
@@ -368,8 +354,7 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -380,16 +365,14 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6">
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -400,16 +383,14 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6">
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -424,16 +405,14 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6">
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Added</a></span>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Added</a></span>
                                                                         </h5>
                                                                         <img src="/assets/img/icon20.svg" alt="icon" />
                                                                     </div>
@@ -446,8 +425,7 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
 
                                                                     </div>
                                                                 </div>
@@ -455,8 +433,7 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -467,16 +444,14 @@
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6">
                                                                     <div class="newpart">
                                                                         <h3>Screen Pannel</h3>
                                                                         <h4>$ 45.00 - $ 55.00</h4>
-                                                                        <h5>57 pieces left in stock <span><a
-                                                                                    href="#">Add</a></span></h5>
+                                                                        <h5>57 pieces left in stock <span><a href="#">Add</a></span></h5>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -537,15 +512,12 @@
                                         </div>
                                         <div class="last-comment">
                                             <div class="last-comment-left">
-                                                <input type="text" name="Write your Comment"
-                                                    placeholder="Write your Comment…" />
+                                                <input type="text" name="Write your Comment" placeholder="Write your Comment…" />
                                             </div>
                                             <div class="last-comment-right">
                                                 <ul>
-                                                    <li><a href="#"><img src="/assets/img/add.svg"
-                                                                alt="icon" /></a></li>
-                                                    <li><a href="#" class="submit"><img src="/assets/img/send.svg"
-                                                                alt="icon"></a></li>
+                                                    <li><a href="#"><img src="/assets/img/add.svg" alt="icon" /></a></li>
+                                                    <li><a href="#" class="submit"><img src="/assets/img/send.svg" alt="icon"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -566,13 +538,11 @@
     <!-- Main jQuery -->
     <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     <!-- Bootstrap Propper jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
     </script>
 
     <!-- Bootstrap jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <!-- Fontawesome Script -->
     <script src="https://kit.fontawesome.com/7749c9f08a.js"></script>
