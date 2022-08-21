@@ -92,7 +92,7 @@
                 <div class="mainleft-inner">
                     <div class="menu-part">
                         <ul>
-                            <li class="active"><a href="#"><img src="/assets/img/icon1.svg" alt="icon" />
+                            <li class="active"><a href="{{ route('dashboard.index') }}"><img src="/assets/img/icon1.svg" alt="icon" />
                                     <p>Dashboard</p>
                                 </a></li>
                             <li><a href="#"><img src="/assets/img/icon2.svg" alt="icon" />
