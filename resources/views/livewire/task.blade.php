@@ -6,10 +6,10 @@
             @foreach ($tasks as $task)
             <li>
                 <label class="customcheckbox">
-                    {!! $task->status == "checked" ? "<del>" : "" !!}
+                    {!! $task->status ? "<del>" : "" !!}
                         {{ $task->value }}
-                        {!! $task->status == "checked" ? "</del>" : "" !!}
-                    <input type="checkbox" {{ $task->status }}>
+                        {!! $task->status ? "</del>" : "" !!}
+                    <input wire:click="check({{ $task->id }})" type="checkbox" {!! $task->status ? "checked" : "" !!}>
                     <span class="checkmark"></span>
                 </label>
             </li>

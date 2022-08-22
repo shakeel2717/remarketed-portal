@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('device_id')->constrained()->onDelete('cascade');
-            $table->enum('status', ['checked', 'unchecked'])->default('unchecked');
+            $table->boolean('status')->default(false);
             $table->string('value');
             $table->timestamps();
         });

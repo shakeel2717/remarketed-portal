@@ -19,7 +19,7 @@
                     <div class="col-md-12">
                         <div class="mt-5">
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addDevice">
+                            <button type="button" class="btn btn-theme" data-bs-toggle="modal" data-bs-target="#addDevice">
                                 <i class="fa fa-plus" aria-hidden="true"></i> Add Device
                             </button>
 
