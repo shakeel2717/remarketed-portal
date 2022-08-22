@@ -9,9 +9,17 @@
         </h3>
     </div>
     <div class="boardview-innera1_img">
-        <a href="javascript:void(0)" class="text-primary" data-bs-toggle="modal" data-bs-target="#assignnModal{{ $device->id }}">
-            <i class="fa fa-plus-circle" style="font-size: 30px;" aria-hidden="true"></i>
-        </a>
+        <ul class="d-flex">
+            @foreach ($device->users as $user)
+            <li><img src="/assets/img/newimage1.svg" alt="images not found" /></li>
+            @endforeach
+            <li class="ms-1">
+                <a href="javascript:void(0)" class="text-primary" data-bs-toggle="modal" data-bs-target="#assignnModal{{ $device->id }}">
+                    <img src="/assets/img/icon23.svg" alt="images not found" />
+                </a>
+            </li>
+        </ul>
+
 
         <!-- Modal -->
         <div class="modal fade" id="assignnModal{{ $device->id }}" tabindex="-1" aria-labelledby="assignnModal{{ $device->id }}Label" aria-hidden="true">
@@ -48,10 +56,7 @@
         <!-- Modal end -->
 
 
-        <!-- <ul>
-            <li><img src="/assets/img/newimage1.svg" alt="images not found" /></li>
-            <li><img src="/assets/img/newimage2.svg" alt="images not found" /></li>
-        </ul> -->
+
     </div>
     <div class="boardview-inner_down">
         <ul>
@@ -112,21 +117,18 @@
                                                         <div class="col-lg-6 col-md-6">
                                                             <div class="popup-left3-left">
                                                                 <h3>ASSIGNED TO</h3>
-                                                                <a href="#">
-                                                                    <img src="/assets/img/newimage1.svg" alt="images not found" />
-                                                                    <img src="/assets/img/hi.svg" alt="images not found" />
-                                                                    <img src="/assets/img/icon23.svg" alt="images not found" />
-                                                                </a>
+                                                                <ul class="d-flex">
+                                                                    @foreach ($device->users as $user)
+                                                                    <li><img src="/assets/img/newimage1.svg" alt="images not found" /></li>
+                                                                    @endforeach
+                                                                </ul>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 col-md-6">
                                                             <div class="popup-left3-left">
                                                                 <h3>DUE DATE</h3>
                                                                 <select class="form-select">
-                                                                    <option value="#">Due 10 Dec</option>
-                                                                    <option value="#">Due 11 Dec</option>
-                                                                    <option value="#">Due 12 Dec</option>
-                                                                    <option value="#">Due 13 Dec</option>
+                                                                    <option value="#">Due {{ $device->created_at->format("d M Y") }}</option>
                                                                 </select>
                                                             </div>
                                                         </div>

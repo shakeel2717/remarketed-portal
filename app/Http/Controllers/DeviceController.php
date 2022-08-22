@@ -50,7 +50,7 @@ class DeviceController extends Controller
         $device->description = $validated['description'];
         $device->save();
 
-        return redirect()->back()->with('success','Device Added Successfully');
+        return redirect()->back()->with('success', 'Device Added Successfully');
     }
 
     /**
@@ -89,8 +89,8 @@ class DeviceController extends Controller
         ]);
 
         $employee = User::find($validated['employee_id']);
-        $employee->devices()->sync($device->id);
-        
+        $employee->devices()->attach($device->id);
+
         return redirect()->back()->with('success', 'Employee has been successfully assigned');
     }
 
