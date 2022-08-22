@@ -16,4 +16,9 @@ class Device extends Model
         'priority',
         'status'
     ];
+
+
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
 }

@@ -4,15 +4,54 @@
             <li><a href="#" class="text-uppercase">{{ $device->status }}</a></li>
             <li><a href="#" class="text-uppercase">{{ $device->priority }}</a></li>
         </ul>
-        <h3 data-bs-toggle="modal" data-bs-target="#exampleModal{{ $device->id }}">
+        <h3 data-bs-toggle="modal" data-bs-target="#device{{ $device->id }}">
             {{$device->title}}
         </h3>
     </div>
     <div class="boardview-innera1_img">
-        <ul>
+        <a href="javascript:void(0)" class="text-primary" data-bs-toggle="modal" data-bs-target="#assignnModal{{ $device->id }}">
+            <i class="fa fa-plus-circle" style="font-size: 30px;" aria-hidden="true"></i>
+        </a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="assignnModal{{ $device->id }}" tabindex="-1" aria-labelledby="assignnModal{{ $device->id }}Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="my-4">
+                            <h4 class="text-center">Assign This Device to Employee</h4>
+                        </div>
+                        <div class="my-4">
+                            <form action="{{ route('device.update',['device' => $device->id ]) }}" method="POST">
+                                @method("PUT")
+                                @csrf
+                                <div class="form-group">
+                                    <label for="employee_id">Select Employee</label>
+                                    <select name="employee_id" id="employee_id" class="form-control">
+                                        @foreach(employees() as $employee)
+                                        <option value="{{$employee->id}}">{{$employee->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                <div class="form-group mt-3">
+                                    <button type="submit" class="btn btn-primary btn-block">Assign</button>
+                                </div>
+
+                            </form>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal end -->
+
+
+        <!-- <ul>
             <li><img src="/assets/img/newimage1.svg" alt="images not found" /></li>
             <li><img src="/assets/img/newimage2.svg" alt="images not found" /></li>
-        </ul>
+        </ul> -->
     </div>
     <div class="boardview-inner_down">
         <ul>
@@ -27,8 +66,8 @@
 
 
 <!-- popup 1 start -->
-<div class="popup1-part">
-    <div class="modal fade" id="exampleModal{{ $device->id }}" tabindex="-1" aria-labelledby="exampleModal{{ $device->id }}Label" aria-hidden="true">
+<div class=" popup1-part">
+    <div class="modal fade" id="device{{ $device->id }}" tabindex="-1" aria-labelledby="device{{ $device->id }}Label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-bodys">

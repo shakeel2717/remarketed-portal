@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Device;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -83,7 +84,14 @@ class DeviceController extends Controller
      */
     public function update(Request $request, Device $device)
     {
-        //
+        $validated = $request->validate([
+            'employee_id' => 'required',
+        ]);
+
+        $employee = User::find($validated['employee_id']);
+        $employee->devices()->sync($device->id);
+        
+        return redirect()->back()->with('success', 'Employee has been successfully assigned');
     }
 
     /**

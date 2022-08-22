@@ -27,29 +27,28 @@
                             <div class="modal fade" id="addDevice" tabindex="-1" aria-labelledby="addDeviceLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="addDeviceLabel">Add Device</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
+                                        
                                         <div class="modal-body">
-                                            <form action="{{ route('device.store') }}" method="POST">
-                                                @csrf
-                                                <div class="form-group">
-                                                    <label for="title">Device Name</label>
-                                                    <input type="text" class="form-control" name="title" id="title" placeholder="Device Name" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="description">Device Description</label>
-                                                    <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
-                                                </div>
-                                                <br>
-                                                <div class="form-group">
-                                                    <button type="submit" class="btn btn-primary">Add Device in TODO</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <div class="my-3">
+                                                <h2 class="title text-center">Add Device in TODO</h2>
+                                                <hr>
+                                                <form action="{{ route('device.store') }}" method="POST">
+                                                    @csrf
+                                                    <div class="form-group mt-2">
+                                                        <label for="title">Device Name</label>
+                                                        <input type="text" class="form-control" name="title" id="title" placeholder="Device Name" required>
+                                                    </div>
+                                                    <div class="form-group mt-2">
+                                                        <label for="description">Device Description</label>
+                                                        <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group d-flex justify-content-between">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                        <button type="submit" class="btn btn-primary">Add Device in TODO</button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +69,7 @@
                                     <span class="span_a1"></span>
                                     <div class="boardview-inner1 oardview-innerb">
                                         <h2>To-Do <span>{{ $devices->where('status','todo')->count() }} Orders</span></h2>
-                                        @foreach($devices->where('status','todo') as $device)
+                                        @foreach($devices->where('status','todo')->sortByDesc('created_at') as $device)
                                         <x-board-device :device="$device" />
                                         @endforeach
                                     </div>
@@ -81,7 +80,7 @@
                                     <span class="span_a2"></span>
                                     <div class="boardview-inner1 toardview-innerb">
                                         <h2>On going Repair <span>{{ $devices->where('status','repair')->count() }} Orders</span></h2>
-                                        @foreach($devices->where('status','repair') as $device)
+                                        @foreach($devices->where('status','repair')->sortByDesc('created_at') as $device)
                                         <x-board-device :device="$device" />
                                         @endforeach
                                     </div>
@@ -92,7 +91,7 @@
                                     <span class="span_a3"></span>
                                     <div class="boardview-inner1 oardview-innerb">
                                         <h2>Testing <span>{{ $devices->where('status','testing')->count() }} Orders</span></h2>
-                                        @foreach($devices->where('status','testing') as $device)
+                                        @foreach($devices->where('status','testing')->sortByDesc('created_at') as $device)
                                         <x-board-device :device="$device" />
                                         @endforeach
                                     </div>
@@ -103,7 +102,7 @@
                                     <span class="span_a4"></span>
                                     <div class="boardview-inner1 oardview-innerb">
                                         <h2>Completed <span>{{ $devices->where('status','complete')->count() }} Orders</span></h2>
-                                        @foreach($devices->where('status','complete') as $device)
+                                        @foreach($devices->where('status','complete')->sortByDesc('created_at') as $device)
                                         <x-board-device :device="$device" />
                                         @endforeach
                                     </div>
