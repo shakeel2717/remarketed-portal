@@ -48,14 +48,11 @@ class Task extends Component
     public function check($task)
     {
         $task = ModelsTask::find($task);
-        $task->status = true;
+        $task->status = !$task->status;
         $task->save();
         $device = Device::find($task->device->id);
         $this->tasks = $device->tasks;
-        dd("Success");
     }
-
-
 
     public function render()
     {
