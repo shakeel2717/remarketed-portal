@@ -27,6 +27,7 @@
 
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}" />
+    @livewireStyles
 
 </head>
 
@@ -552,6 +553,7 @@
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <x-alert />
 
+    @livewireScripts
 </body>
 
 </html>

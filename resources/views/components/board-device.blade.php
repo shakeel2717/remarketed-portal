@@ -156,34 +156,7 @@
                                                 <li><img src="/assets/img/Image3.png" alt="images not found" /></li>
                                             </ul>
                                         </div>
-                                        <div class="left5-tasklist">
-                                            <h3><img src="/assets/img/done2.svg" alt="icon" class="img_a1" /> Task
-                                                List <span><img src="/assets/img/icon17.svg" alt="icon" class="img_a2" />2/3 completed</span> </h3>
-                                            <ul>
-                                                <li>
-                                                    <label class="customcheckbox">
-                                                        <del>Screen Repair</del>
-                                                        <input type="checkbox" checked="checked">
-                                                        <span class="checkmark"></span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="customcheckbox">
-                                                        <del>Create mood board</del>
-                                                        <input type="checkbox" checked="checked">
-                                                        <span class="checkmark"></span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="customcheckbox">
-                                                        Motherboard change
-                                                        <input type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                    </label>
-                                                </li>
-                                                <li><a href="#">+Add new Subtask</a></li>
-                                            </ul>
-                                        </div>
+                                        @livewire('task', ['device' => $device])
                                     </div>
                                 </div>
                                 <div class="mainpopup-right">
