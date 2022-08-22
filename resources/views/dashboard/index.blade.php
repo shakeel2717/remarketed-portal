@@ -17,7 +17,45 @@
             <div class="container-fluid px-5">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="#" class="btn btn-lg btn-primary mt-4"> <i class="fa fa-plus" aria-hidden="true"></i> Add Device </a>
+                        <div class="mt-5">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addDevice">
+                                <i class="fa fa-plus" aria-hidden="true"></i> Add Device
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="addDevice" tabindex="-1" aria-labelledby="addDeviceLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="addDeviceLabel">Add Device</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="{{ route('device.store') }}" method="POST">
+                                                @csrf
+                                                <div class="form-group">
+                                                    <label for="title">Device Name</label>
+                                                    <input type="text" class="form-control" name="title" id="title" placeholder="Device Name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="description">Device Description</label>
+                                                    <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+                                                </div>
+                                                <br>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Add Device in TODO</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

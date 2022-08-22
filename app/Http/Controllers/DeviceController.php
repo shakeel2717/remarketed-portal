@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Device;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class DeviceController extends Controller
 {
@@ -35,7 +37,19 @@ class DeviceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+
+        // storing this device 
+        $device = new Device();
+        $device->title = $validated['title'];
+        $device->serial = Str::random(15);
+        $device->description = $validated['description'];
+        $device->save();
+
+        return redirect()->back()->with('success','Device Added Successfully');
     }
 
     /**
