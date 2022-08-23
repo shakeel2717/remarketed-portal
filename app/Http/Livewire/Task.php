@@ -39,6 +39,10 @@ class Task extends Component
         $newTask->device_id = $this->device_id;
         $newTask->value = $this->task;
         $newTask->save();
+
+        // adding activity
+        activity("New Task Added", "Task: " . $newTask->value . " Added", $this->device_id);
+
         $device = Device::find($this->device_id);
         $this->tasks = $device->tasks;
         $this->task = "";
@@ -50,6 +54,10 @@ class Task extends Component
         $task = ModelsTask::find($task);
         $task->status = !$task->status;
         $task->save();
+
+        // adding activity
+        activity("Task Status Updated", "Task: " . $task->value . " Updated", $this->device_id);
+
         $device = Device::find($task->device->id);
         $this->tasks = $device->tasks;
     }

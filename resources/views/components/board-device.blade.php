@@ -163,17 +163,31 @@
                                     <div class="popup_right">
                                         <h3>Activity</h3>
                                     </div>
+                                    @forelse ($device->activities as $activity)
                                     <div class="miancomment-text">
                                         <div class="Comment-part">
                                             <div class="Comment-img">
                                                 <img src="/assets/img/icon18.svg" alt="images not found" />
                                             </div>
                                             <div class="Comment-right">
-                                                <h3><span>Maxbert</span> Device Added in TODO</h3>
-                                                <p>{{ $device->created_at->format('M d, Y  m:i:s') }}</p>
+                                                <h3><span>Activity</span> {{ $activity->title }}</h3>
+                                                <p>{{ $activity->description }}</p>
+                                                <p>{{ $activity->created_at->format('M d, Y  m:i:s') }}</p>
                                             </div>
                                         </div>
                                     </div>
+                                    @empty
+                                    <div class="miancomment-text">
+                                        <div class="Comment-part">
+                                            <div class="Comment-img">
+                                                <img src="/assets/img/icon18.svg" alt="images not found" />
+                                            </div>
+                                            <div class="Comment-right">
+                                                <h3><span>Activity</span> No Activity Found</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforelse
                                     <div class="last-comment">
                                         <div class="last-comment-left">
                                             <input type="text" name="Write your Comment" placeholder="Write your Comment…" />

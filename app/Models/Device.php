@@ -27,4 +27,9 @@ class Device extends Model
     {
         return $this->hasMany(Task::class);
     }
+
+    public function activities()
+    {
+        return $this->hasMany(Activity::class);
+    }
 }

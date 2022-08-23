@@ -50,6 +50,8 @@ class DeviceController extends Controller
         $device->description = $validated['description'];
         $device->save();
 
+        activity("Device Added in TODO", "Device Added Manually in System.", $device->id);
+
         return redirect()->back()->with('success', 'Device Added Successfully');
     }
 
@@ -90,6 +92,8 @@ class DeviceController extends Controller
 
         $employee = User::find($validated['employee_id']);
         $employee->devices()->attach($device->id);
+
+        activity("Device Assignment", "Device Assigned with " . $employee->name, $device->id);
 
         return redirect()->back()->with('success', 'Employee has been successfully assigned');
     }
