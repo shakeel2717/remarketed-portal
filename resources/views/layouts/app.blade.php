@@ -28,6 +28,7 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}" />
     @livewireStyles
+    @powerGridStyles
 
 </head>
 
@@ -98,9 +99,14 @@
                             <li class="active"><a href="{{ route('dashboard.index') }}"><img src="/assets/img/icon1.svg" alt="icon" />
                                     <p>Dashboard</p>
                                 </a></li>
-                            <li><a href="#"><img src="/assets/img/icon2.svg" alt="icon" />
+                            <li><a href="{{ route('device.index') }}"><img src="/assets/img/icon2.svg" alt="icon" />
+                                    <p>My Devices</p>
+                                </a>
+                            </li>
+                            <li><a href="{{ route('task.index') }}"><img src="/assets/img/icon2.svg" alt="icon" />
                                     <p>My Tasks</p>
-                                </a></li>
+                                </a>
+                            </li>
                             <li><a href="#"><img src="/assets/img/icon3.svg" alt="icon" />
                                     <p>Alarms/Notifications</p>
                                 </a></li>
@@ -144,7 +150,7 @@
 
                                 <ul>
                                     @livewire("search")
-                                    <li><a href="#"><img src="/assets/img/icon7.svg" alt="icon" /></a></li>
+                                    <li><a href="#" onclick="window.location.reload();"><img src="/assets/img/icon7.svg" alt="icon" /></a></li>
                                     <li><a href="#"><img src="/assets/img/icon6.svg" alt="icon" /></a></li>
                                 </ul>
                             </div>
@@ -547,6 +553,7 @@
     <x-alert />
 
     @livewireScripts
+    @powerGridScripts
 </body>
 
 </html>

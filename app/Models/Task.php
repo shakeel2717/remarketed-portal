@@ -9,6 +9,12 @@ class Task extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'device_id',
+        'status',
+        'value',
+    ];
+
 
     public function device()
     {

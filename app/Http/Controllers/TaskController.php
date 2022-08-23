@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Device;
 use App\Models\Task;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        $devices = Device::get();
+        return view('task.index',compact('devices'));
     }
 
     /**
