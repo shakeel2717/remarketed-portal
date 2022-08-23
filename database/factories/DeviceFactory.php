@@ -20,7 +20,7 @@ class DeviceFactory extends Factory
         return [
             'title' => fake()->macPlatformToken(),
             'description' => fake()->paragraph(),
-            'serial' => Str::random(12),
+            'serial' => rand(0000000,9999999),
             'priority' => $this->faker->randomElement(['low', 'medium', 'high']),
             'status' => $this->faker->randomElement(['todo', 'repair', 'testing', 'complete']),
         ];

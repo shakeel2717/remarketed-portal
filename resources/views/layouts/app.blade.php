@@ -78,7 +78,7 @@
     <div class="mobilesearch-part">
         <div class="mobilesearch-inner">
             <form action="#" method="POST">
-                <input type="text" name="Search" placeholder="Search">
+                <input type="text" name="Search" placeholder="Search" autofocus>
                 <button>
                     <img src="/assets/img/search-icon.svg" alt="icon">
                 </button>
@@ -143,14 +143,7 @@
                             <div class="header-right">
 
                                 <ul>
-                                    <li>
-                                        <form action="#" method="POST">
-                                            <input type="text" name="Search" placeholder="Search" />
-                                            <button>
-                                                <img src="/assets/img/search-icon.svg" alt="icon" />
-                                            </button>
-                                        </form>
-                                    </li>
+                                    @livewire("search")
                                     <li><a href="#"><img src="/assets/img/icon7.svg" alt="icon" /></a></li>
                                     <li><a href="#"><img src="/assets/img/icon6.svg" alt="icon" /></a></li>
                                 </ul>

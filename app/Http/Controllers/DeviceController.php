@@ -39,6 +39,7 @@ class DeviceController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'serial' => 'required|string|unique:devices',
             'title' => 'required',
             'description' => 'required',
         ]);
@@ -46,7 +47,7 @@ class DeviceController extends Controller
         // storing this device 
         $device = new Device();
         $device->title = $validated['title'];
-        $device->serial = Str::random(15);
+        $device->serial = $validated['serial'];
         $device->description = $validated['description'];
         $device->save();
 

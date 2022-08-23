@@ -27,13 +27,17 @@
                             <div class="modal fade" id="addDevice" tabindex="-1" aria-labelledby="addDeviceLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        
+
                                         <div class="modal-body">
                                             <div class="my-3">
                                                 <h2 class="title text-center">Add Device in TODO</h2>
                                                 <hr>
                                                 <form action="{{ route('device.store') }}" method="POST">
                                                     @csrf
+                                                    <div class="form-group mt-2">
+                                                        <label for="serial">Serial # / BarCode</label>
+                                                        <input type="text" class="form-control" name="serial" id="serial" placeholder="Serial Number" required>
+                                                    </div>
                                                     <div class="form-group mt-2">
                                                         <label for="title">Device Name</label>
                                                         <input type="text" class="form-control" name="title" id="title" placeholder="Device Name" required>
