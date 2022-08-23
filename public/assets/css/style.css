@@ -928,6 +928,7 @@ transform: rotate(39deg) translate(-7px, -5px);
     width: 30%;
     border-left: 1px solid #DADADA;
     position: relative;
+    padding-bottom: 40px;
 }
 
 
