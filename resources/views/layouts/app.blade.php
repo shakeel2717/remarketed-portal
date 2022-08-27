@@ -103,6 +103,10 @@
                                     <p>My Devices</p>
                                 </a>
                             </li>
+                            <li><a href="{{ route('employee.index') }}"><img src="/assets/img/icon2.svg" alt="icon" />
+                                    <p>All Employees</p>
+                                </a>
+                            </li>
                             <li><a href="{{ route('task.index') }}"><img src="/assets/img/icon2.svg" alt="icon" />
                                     <p>My Tasks</p>
                                 </a>
