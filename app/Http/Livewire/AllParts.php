@@ -13,6 +13,12 @@ final class AllParts extends PowerGridComponent
 {
     use ActionButton;
 
+    public $title;
+    public $stock;
+    public $min_price;
+    public $max_price;
+    public $status;
+
     /*
     |--------------------------------------------------------------------------
     |  Features Setup
@@ -44,10 +50,10 @@ final class AllParts extends PowerGridComponent
     */
 
     /**
-    * PowerGrid datasource.
-    *
-    * @return Builder<\App\Models\Parts>
-    */
+     * PowerGrid datasource.
+     *
+     * @return Builder<\App\Models\Parts>
+     */
     public function datasource(): Builder
     {
         return Parts::query();
@@ -101,7 +107,7 @@ final class AllParts extends PowerGridComponent
     |
     */
 
-     /**
+    /**
      * PowerGrid Columns.
      *
      * @return array<int, Column>
@@ -109,25 +115,26 @@ final class AllParts extends PowerGridComponent
     public function columns(): array
     {
         return [
-            Column::make('ID', 'id')
-                ->makeInputRange(),
-
             Column::make('TITLE', 'title')
                 ->sortable()
+                ->editOnClick()
                 ->searchable()
                 ->makeInputText(),
 
             Column::make('STOCK', 'stock')
                 ->sortable()
                 ->searchable()
+                ->editOnClick()
                 ->makeInputText(),
 
             Column::make('MIN PRICE', 'min_price')
                 ->sortable()
+                ->editOnClick()
                 ->searchable(),
 
             Column::make('MAX PRICE', 'max_price')
                 ->sortable()
+                ->editOnClick()
                 ->searchable(),
 
             Column::make('STATUS', 'status')
@@ -138,13 +145,7 @@ final class AllParts extends PowerGridComponent
                 ->sortable()
                 ->makeInputDatePicker(),
 
-            Column::make('UPDATED AT', 'updated_at_formatted', 'updated_at')
-                ->searchable()
-                ->sortable()
-                ->makeInputDatePicker(),
-
-        ]
-;
+        ];
     }
 
     /*
@@ -155,27 +156,65 @@ final class AllParts extends PowerGridComponent
     |
     */
 
-     /**
+    /**
      * PowerGrid Parts Action Buttons.
      *
      * @return array<int, Button>
      */
 
-    /*
+
     public function actions(): array
     {
-       return [
-           Button::make('edit', 'Edit')
-               ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
-               ->route('parts.edit', ['parts' => 'id']),
+        return [
+            //    Button::make('edit', 'Edit')
+            //        ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
+            //        ->route('parts.edit', ['parts' => 'id']),
 
-           Button::make('destroy', 'Delete')
-               ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')
-               ->route('parts.destroy', ['parts' => 'id'])
-               ->method('delete')
+            //    Button::make('destroy', 'Delete')
+            //        ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')
+            //        ->route('parts.destroy', ['parts' => 'id'])
+            //        ->method('delete')
+
+            Button::make('destroy', 'Delete')
+                ->class('btn btn-danger btn-sm')
+                ->emit('delete', ['id' => 'id']),
         ];
     }
-    */
+
+
+    public function onUpdatedToggleable(string $id, string  $field, string  $value): void
+    {
+        Parts::query()->find($id)->update([
+            $field => $value,
+        ]);
+    }
+
+
+    public function onUpdatedEditable(string $id, string $field, string $value): void
+    {
+        Parts::query()->find($id)->update([
+            $field => $value,
+        ]);
+    }
+
+
+    public function delete($id)
+    {
+        $method = Parts::find($id['id']);
+        $method->delete();
+    }
+
+
+    protected function getListeners()
+    {
+        return array_merge(
+            parent::getListeners(),
+            [
+                'delete',
+            ]
+        );
+    }
+
 
     /*
     |--------------------------------------------------------------------------
@@ -185,7 +224,9 @@ final class AllParts extends PowerGridComponent
     |
     */
 
-     /**
+
+
+    /**
      * PowerGrid Parts Action Rules.
      *
      * @return array<int, RuleActions>

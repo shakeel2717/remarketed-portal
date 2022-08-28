@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PartCategory;
 use App\Models\Parts;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class PartsController extends Controller
      */
     public function index()
     {
-        return view('part.index');
+        $categories = PartCategory::where('status', true)->get();
+        return view('part.index', compact('categories'));
     }
 
     /**
@@ -35,7 +37,23 @@ class PartsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'category_id' => 'required|integer|exists:part_categories,id',
+            'name' => 'required|string|max:255',
+            'stock' => 'required|integer|min:1',
+            'min_price' => 'required|integer|min:1',
+            'max_price' => 'required|integer|min:1',
+        ]);
+
+        $part = new Parts();
+        $part->part_categories_id = $validated['category_id'];
+        $part->title = $validated['name'];
+        $part->stock = $validated['stock'];
+        $part->min_price = $validated['min_price'];
+        $part->max_price = $validated['max_price'];
+        $part->save();
+
+        return redirect()->back()->with('success', 'New Part Added Successfully');
     }
 
     /**
