@@ -18,7 +18,8 @@ class Device extends Model
     ];
 
 
-    public function users(){
+    public function users()
+    {
         return $this->belongsToMany(User::class);
     }
 
@@ -31,5 +32,11 @@ class Device extends Model
     public function activities()
     {
         return $this->hasMany(Activity::class);
+    }
+
+
+    public function parts()
+    {
+        return $this->belongsToMany(Parts::class);
     }
 }

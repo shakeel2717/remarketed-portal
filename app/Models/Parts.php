@@ -23,4 +23,9 @@ class Parts extends Model
     {
         return $this->belongsTo(PartCategory::class);
     }
+
+
+    public function devices(){
+        return $this->belongsToMany(Device::class);
+    }
 }

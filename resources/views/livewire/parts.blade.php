@@ -48,13 +48,7 @@
                                                     <div class="new-part">
                                                         <div class="row">
                                                             @foreach ($parts->where('part_categories_id', 1) as $part)
-                                                            <div class="col-lg-6 col-md-6 h-100">
-                                                                <div class="newpart">
-                                                                    <h3 title="{{ $part->title }}">{{ str()->words($part->title,5) }}</h3>
-                                                                    <h4>$ {{ number_format($part->min_price,2) }} - $ {{ number_format($part->max_price,2)  }}</h4>
-                                                                    <h5>{{ $part->stock }} pieces left in stock <span><a href="#">Add</a></span></h5>
-                                                                </div>
-                                                            </div>
+                                                            <x-parts :part="$part" :device="$device" />
                                                             @endforeach
                                                         </div>
                                                     </div>
@@ -64,13 +58,7 @@
                                                     <div class="new-part">
                                                         <div class="row">
                                                             @foreach ($parts->where('part_categories_id', 2) as $part)
-                                                            <div class="col-lg-6 col-md-6 h-100">
-                                                                <div class="newpart">
-                                                                    <h3 title="{{ $part->title }}">{{ str()->words($part->title,5) }}</h3>
-                                                                    <h4>$ {{ number_format($part->min_price,2) }} - $ {{ number_format($part->max_price,2)  }}</h4>
-                                                                    <h5>{{ $part->stock }} pieces left in stock <span><a href="#">Add</a></span></h5>
-                                                                </div>
-                                                            </div>
+                                                            <x-parts :part="$part" :device="$device" />
                                                             @endforeach
                                                         </div>
                                                     </div>
@@ -79,13 +67,7 @@
                                                     <div class="new-part">
                                                         <div class="row">
                                                             @foreach ($parts->where('part_categories_id', 3) as $part)
-                                                            <div class="col-lg-6 col-md-6 h-100">
-                                                                <div class="newpart">
-                                                                    <h3 title="{{ $part->title }}">{{ str()->words($part->title,5) }}</h3>
-                                                                    <h4>$ {{ number_format($part->min_price,2) }} - $ {{ number_format($part->max_price,2)  }}</h4>
-                                                                    <h5>{{ $part->stock }} pieces left in stock <span><a href="#">Add</a></span></h5>
-                                                                </div>
-                                                            </div>
+                                                            <x-parts :part="$part" :device="$device" />
                                                             @endforeach
                                                         </div>
                                                     </div>
@@ -94,14 +76,8 @@
 
                                                     <div class="new-part">
                                                         <div class="row">
-                                                            @foreach ($parts->where('part_categories_id', 3) as $part)
-                                                            <div class="col-lg-6 col-md-6 h-100">
-                                                                <div class="newpart">
-                                                                    <h3 title="{{ $part->title }}">{{ str()->words($part->title,5) }}</h3>
-                                                                    <h4>$ {{ number_format($part->min_price,2) }} - $ {{ number_format($part->max_price,2)  }}</h4>
-                                                                    <h5>{{ $part->stock }} pieces left in stock <span><a href="#">Add</a></span></h5>
-                                                                </div>
-                                                            </div>
+                                                            @foreach ($parts->where('part_categories_id', 4) as $part)
+                                                            <x-parts :part="$part" :device="$device" />
                                                             @endforeach
                                                         </div>
                                                     </div>
