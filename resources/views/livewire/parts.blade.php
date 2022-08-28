@@ -112,65 +112,7 @@
 
                                     </div>
                                 </div>
-                                <div class="mainpopup-right">
-                                    <div class="popup_right">
-                                        <h3>Activity</h3>
-                                    </div>
-                                    <div class="miancomment-text">
-                                        <div class="Comment-part">
-                                            <div class="Comment-img">
-                                                <img src="/assets/img/icon18.svg" alt="images not found" />
-                                            </div>
-                                            <div class="Comment-right">
-                                                <h3><span>Maxbert</span> requested for a missing part.</h3>
-                                                <p>Oct 16, 2020 at 9:12 AM</p>
-                                            </div>
-                                        </div>
-                                        <div class="Comment-part">
-                                            <div class="Comment-img">
-                                                <img src="/assets/img/icon19.svg" alt="images not found" />
-                                            </div>
-                                            <div class="Comment-right">
-                                                <h3><span>Maxbert</span> added a new comment.</h3>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor</h4>
-                                                <p>Oct 16, 2020 at 9:12 AM</p>
-                                            </div>
-                                        </div>
-                                        <div class="Comment-part">
-                                            <div class="Comment-img">
-                                                <img src="/assets/img/icon18.svg" alt="images not found" />
-                                            </div>
-                                            <div class="Comment-right">
-                                                <h3><span>Maxbert</span> requested for a missing part.</h3>
-                                                <p>Oct 16, 2020 at 9:12 AM</p>
-                                            </div>
-                                        </div>
-                                        <div class="Comment-part Comment-part1">
-                                            <div class="Comment-img">
-                                                <img src="/assets/img/icon19.svg" alt="images not found" />
-                                            </div>
-                                            <div class="Comment-right">
-                                                <h3><span>Maxbert</span> added a new comment.</h3>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor</h4>
-                                                <p>Oct 16, 2020 at 9:12 AM</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="last-comment">
-                                        <div class="last-comment-left">
-                                            <input type="text" name="Write your Comment" placeholder="Write your Comment…" />
-                                        </div>
-                                        <div class="last-comment-right">
-                                            <ul>
-                                                <li><a href="#"><img src="/assets/img/add.svg" alt="icon" /></a></li>
-                                                <li><a href="#" class="submit"><img src="/assets/img/send.svg" alt="icon"></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                @livewire("activity-list",['device' => $device])
                             </div>
                         </div>
                     </div>

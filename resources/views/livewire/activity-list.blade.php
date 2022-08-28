@@ -23,6 +23,7 @@
                 </div>
                 <div class="Comment-right">
                     <h3><span>Activity</span> No Activity Found</h3>
+                    <p>You can Add manully form the below form</p>
                 </div>
             </div>
         </div>
