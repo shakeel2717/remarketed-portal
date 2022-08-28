@@ -170,3 +170,6 @@
     </div>
 </div>
 <!-- popup 1 end -->
+
+
+@livewire("parts",['device' => $device])
