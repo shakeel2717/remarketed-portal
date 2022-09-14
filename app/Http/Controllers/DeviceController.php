@@ -92,7 +92,7 @@ class DeviceController extends Controller
         ]);
 
         $employee = User::find($validated['employee_id']);
-        $employee->devices()->attach($device->id);
+        $employee->devices()->sync($device->id);
 
         activity("Device Assignment", "Device Assigned with " . $employee->name, $device->id);
 

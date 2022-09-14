@@ -60,7 +60,7 @@
     </div>
     <div class="boardview-inner_down">
         <ul>
-            <li><a href="#"><img src="/assets/img/chat_bubble_outline.svg" alt="iocn" /> 0</a></li>
+            <li><a href="#"><img src="/assets/img/chat_bubble_outline.svg" alt="iocn" />{{ $device->activities->count() }}</a></li>
             <li><a href="#"><img src="/assets/img/link.svg" alt="icon" /> 0</a></li>
             <li><a href="#"><img src="/assets/img/icon9.svg" alt="icon" /> Due {{ $device->created_at->format("d M Y") }}</a></li>
         </ul>
@@ -91,7 +91,7 @@
                                         </div>
                                         <div class="popup_left1-right">
                                             <ul>
-                                                <li><a href="#">Save</a></li>
+                                                <li><a href="#" data-bs-dismiss="modal" aria-label="Close">Save</a></li>
                                                 <li><a href="#"><img src="/assets/img/icon16.svg" alt="iocn" /></a></li>
                                             </ul>
                                         </div>
@@ -99,7 +99,10 @@
                                     <div class="ttpopup-left2">
                                         <div class="popup-left2">
                                             <div class="dnpopup-left1">
-                                                <h2>{{ $device->title }} <span><a href="#">To do <i class="fas fa-chevron-down"></i></a></span></h2>
+                                                <div class="d-flex justify-content-between align-items-center h-100">
+                                                    <h2>{{ $device->title }} </h2>
+                                                    @livewire('transfer-device',['device' => $device])
+                                                </div>
                                             </div>
                                             <div class="down-dnpopup-left1">
                                                 <ul>

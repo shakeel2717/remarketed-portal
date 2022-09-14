@@ -1026,7 +1026,7 @@ ul {
     margin: 0;
 }
 
-.dnpopup-left1 h2 {
+.dnpopup-left1 {
     color: #000000;
     font-size: 18px;
     font-weight: 600;
@@ -1034,34 +1034,11 @@ ul {
     height: 64px;
     background-color: #f5faf4;
     border-radius: 10px;
-    line-height: 64px;
     display: block;
     margin: 0;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
-.dnpopup-left1 h2 span {
-    float: right;
-    position: relative;
-    top: 12px;
-}
-
-.dnpopup-left1 h2 a {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    background-color: #F79E1B;
-    width: 103px;
-    height: 41px;
-    display: block;
-    line-height: 41px;
-    text-align: center;
-    border-radius: 3.32px;
-}
-
-.dnpopup-left1 h2 a i {
-    padding-left: 8px;
-}
 
 
 .popup-left3 {
