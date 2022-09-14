@@ -19,9 +19,16 @@
                     <div class="col-md-12">
                         <div class="mt-5">
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-theme" data-bs-toggle="modal" data-bs-target="#addDevice">
-                                <i class="fa fa-plus" aria-hidden="true"></i> Add Device
-                            </button>
+                            <div class="d-flex">
+                                <button type="button" class="btn btn-theme" data-bs-toggle="modal" data-bs-target="#addDevice">
+                                    <i class="fa fa-plus" aria-hidden="true"></i> Add Device
+                                </button>
+                                <div class="ms-3">
+                                    <button type="button" class="btn btn-theme" onclick="window.location.reload();">
+                                        <i class="fa fa-refresh" aria-hidden="true"></i> Refresh
+                                    </button>
+                                </div>
+                            </div>
 
                             <!-- Modal -->
                             <div class="modal fade" id="addDevice" tabindex="-1" aria-labelledby="addDeviceLabel" aria-hidden="true">
