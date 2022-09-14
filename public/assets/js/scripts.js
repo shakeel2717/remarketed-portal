@@ -10,12 +10,5 @@
 			jQuery(".down-dnpopup-left1").slideToggle();
 		});		
 			
-		
-		
-		
-		
-		
-		
-		
 	});
-})(jQuery);
+});

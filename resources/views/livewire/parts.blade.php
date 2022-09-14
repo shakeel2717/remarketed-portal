@@ -21,7 +21,7 @@
                                         </div>
                                         <div class="popup_left1-right">
                                             <ul>
-                                                <li><a href="#">Save</a></li>
+                                                <li><a href="#" data-bs-dismiss="modal" aria-label="Close">Save</a></li>
                                                 <li><a href="#"><img src="/assets/img/icon16.svg" alt="iocn" /></a></li>
                                             </ul>
                                         </div>
