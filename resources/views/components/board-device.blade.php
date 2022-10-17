@@ -7,6 +7,7 @@
         <h3 data-bs-toggle="modal" data-bs-target="#device{{ $device->id }}">
             {{$device->title}}
         </h3>
+        <p class="mt-0"> Serial #: {{$device->serial}} </p>
     </div>
     <div class="boardview-innera1_img">
         <ul class="d-flex">
@@ -91,7 +92,7 @@
                                         </div>
                                         <div class="popup_left1-right">
                                             <ul>
-                                                <li><a href="#" data-bs-dismiss="modal" aria-label="Close">Save</a></li>
+                                                <li><a href="javascript:void(0);" onClick="refreshPage()" aria-label="Close">Save</a></li>
                                                 <li><a href="#"><img src="/assets/img/icon16.svg" alt="iocn" /></a></li>
                                             </ul>
                                         </div>
@@ -139,7 +140,7 @@
                                                 </div>
                                                 <div class="col-lg-8 col-md-8">
                                                     <div class="popup-left3-right">
-                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+ Request for
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $device->id }}">+ Request for
                                                             Additional parts</a>
                                                     </div>
                                                 </div>

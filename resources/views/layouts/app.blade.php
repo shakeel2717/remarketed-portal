@@ -17,7 +17,8 @@
     <link rel="icon" href="/assets/img/favicon.ico" />
 
     <!-- Include Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('assets/icons/css/font-awesome.min.css') }}">
@@ -96,14 +97,16 @@
                 <div class="mainleft-inner">
                     <div class="menu-part">
                         <ul>
-                            <li class="active"><a href="{{ route('dashboard.index') }}"><img src="/assets/img/icon1.svg" alt="icon" />
+                            <li class="active"><a href="{{ route('dashboard.index') }}"><img src="/assets/img/icon1.svg"
+                                        alt="icon" />
                                     <p>Dashboard</p>
                                 </a></li>
                             <li><a href="{{ route('device.index') }}"><img src="/assets/img/icon2.svg" alt="icon" />
                                     <p>My Devices</p>
                                 </a>
                             </li>
-                            <li><a href="{{ route('employee.index') }}"><img src="/assets/img/icon2.svg" alt="icon" />
+                            <li><a href="{{ route('employee.index') }}"><img src="/assets/img/icon2.svg"
+                                        alt="icon" />
                                     <p>All Employees</p>
                                 </a>
                             </li>
@@ -111,7 +114,8 @@
                                     <p>My Tasks</p>
                                 </a>
                             </li>
-                            <li><a href="{{ route('category.index') }}"><img src="/assets/img/icon2.svg" alt="icon" />
+                            <li><a href="{{ route('category.index') }}"><img src="/assets/img/icon2.svg"
+                                        alt="icon" />
                                     <p>Parts Categories</p>
                                 </a>
                             </li>
@@ -119,7 +123,7 @@
                                     <p>All Parts</p>
                                 </a>
                             </li>
-                            <li><a href="#"><img src="/assets/img/icon3.svg" alt="icon" />
+                            {{-- <li><a href="#"><img src="/assets/img/icon3.svg" alt="icon" />
                                     <p>Alarms/Notifications</p>
                                 </a></li>
                             <li><a href="#"><img src="/assets/img/icon4.svg" alt="icon" />
@@ -127,7 +131,7 @@
                                 </a></li>
                             <li><a href="#"><img src="/assets/img/icon5.svg" alt="icon" />
                                     <p>Settings</p>
-                                </a></li>
+                                </a></li> --}}
                         </ul>
                     </div>
                     <div class="profile-part">
@@ -161,8 +165,9 @@
                             <div class="header-right">
 
                                 <ul>
-                                    @livewire("search")
-                                    <li><a href="#" onclick="window.location.reload();"><img src="/assets/img/icon7.svg" alt="icon" /></a></li>
+                                    @livewire('search')
+                                    <li><a href="#" onclick="window.location.reload();"><img
+                                                src="/assets/img/icon7.svg" alt="icon" /></a></li>
                                     <li><a href="#"><img src="/assets/img/icon6.svg" alt="icon" /></a></li>
                                 </ul>
                             </div>
@@ -180,13 +185,15 @@
     <!-- main-area end -->
 
     <!-- Main jQuery -->
-    <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-3.4.1.min.js') }}"></script>
     <!-- Bootstrap Propper jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
     </script>
 
     <!-- Bootstrap jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <!-- Fontawesome Script -->
     <script src="https://kit.fontawesome.com/7749c9f08a.js"></script>
@@ -194,7 +201,14 @@
     <!-- Custom jQuery -->
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+
     <x-alert />
+
+    <script>
+        function refreshPage() {
+            window.location.reload();
+        }
+    </script>
 
     @livewireScripts
     @powerGridScripts

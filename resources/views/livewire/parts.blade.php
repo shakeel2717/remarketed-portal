@@ -1,7 +1,7 @@
 <!-- popup 2 start -->
 <div class="popup-part2">
 
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="staticBackdrop{{ $device->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop{{ $device->id }}Label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-bodys">
@@ -21,14 +21,14 @@
                                         </div>
                                         <div class="popup_left1-right">
                                             <ul>
-                                                <li><a href="#" data-bs-dismiss="modal" aria-label="Close">Save</a></li>
+                                                <li><a href="#" onClick="refreshPage()">Done</a></li>
                                                 <li><a href="#"><img src="/assets/img/icon16.svg" alt="iocn" /></a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="ttpopup-left2 min-vh-100">
                                         <div class="topnew-part">
-                                            <h2>Repair Macbook-121233</h2>
+                                            <h2>{{ $device->title }}</h2>
                                         </div>
                                         <!--- new tab -->
                                         <div>

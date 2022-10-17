@@ -28,6 +28,8 @@ class Parts extends Component
 
         // adding new activity
         activity("New Part Ordered", "requested for a missing part.", $device->id);
+
+        $this->dispatchBrowserEvent('refresh-page');
     }
 
     public function render()

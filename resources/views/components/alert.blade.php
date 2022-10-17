@@ -21,3 +21,8 @@
         swal("Success!", event.detail.message, "success");
     })
 </script>
+<script>
+  window.addEventListener('refresh-page', event => {
+     window.location.reload(false); 
+  })
+</script>
